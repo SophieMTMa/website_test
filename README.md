@@ -1,7 +1,7 @@
 # Edit Website
 
 :flags: A simplified portfolio template for beginners learning HTML and CSS 
-	Adapted from https://github.com/Hong-Kong-International-School/template-portfolio-website
+🖊️ Adapted from https://github.com/Hong-Kong-International-School/template-portfolio-website
 
 ## Features
 
