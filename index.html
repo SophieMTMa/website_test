@@ -1,58 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- Navigation -->
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#about">About</a></li>
-      </ul>
-    </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sophie MT</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="name">Hi! I am<br><span class="name-outline">SOPHIE MT</span></h1>
+        <p class="subtitle">📍 500♾️ - Location</p>
+        <p>Recommended me below! ↓</p>
+    </header>
 
-    <!-- Home Section -->
-    <section id="home">
-      <h1>Hi! Welcome to My Portfolio</h1>
-      <p>Have fun looking at my projects! </p>
+    <section id="about">
+        <h2>About me</h2>
+        <div class="about-container">
+            <div class="profile-circle"></div>
+            <div class="text">
+                A passionate creator and innovator with expertise in design and development. 
+                Focused on creating meaningful digital experiences that make a difference.
+            </div>
+        </div>
+        <div class="skills">
+            <div class="skill-box" title="Skill 1"></div>
+            <div class="skill-box" title="Skill 2"></div>
+            <div class="skill-box" title="Skill 3"></div>
+        </div>
     </section>
 
-    <!-- Projects Section -->
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="timeline-container">
+            <div class="timeline-card">
+                <h3>Undergraduate Research Assistance</h3>
+                <div class="subtitle">University of Waterloo</div>
+                <div class="description">
+                    Explored haptic experiences in a virtual environment and analyzed appropriate machine learning models to better inform the fabrication of physical devices
+                </div>
+            </div>
+            <div class="timeline-card">
+                <h3>Work Space</h3>
+                <div class="subtitle">Company Name</div>
+                <div class="description">
+                    Description of work and achievements
+                </div>
+            </div>
+            <div class="timeline-card">
+                <h3>Experience 3</h3>
+                <div class="subtitle">Company Name</div>
+                <div class="description">
+                    Description of work and achievements
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="timeline-container">
+            <div class="timeline-card">
+                <h3>TECH 2020 Workshop prog</h3>
+                <div class="subtitle">Institution Name</div>
+                <div class="description">
+                    Details about the program and achievements
+                </div>
+            </div>
+            <div class="timeline-card">
+                <h3>UI Program Design Grade</h3>
+                <div class="subtitle">Institution Name</div>
+                <div class="description">
+                    Details about the program and achievements
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="awards">
+        <h2>Awards and recognition</h2>
+        <div class="timeline-container">
+            <div class="timeline-card">
+                <h3>Award 1</h3>
+                <div class="subtitle">Awarding Institution</div>
+                <div class="description">
+                    Description of the award and its significance
+                </div>
+            </div>
+            <div class="timeline-card">
+                <h3>Recognition 2</h3>
+                <div class="subtitle">Awarding Institution</div>
+                <div class="description">
+                    Description of the recognition and its significance
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="projects">
-      <h2>My Projects</h2>
-      <div class="project">
-        <h3>GiftGenie</h3> 
-        <p>Gift Genie is a recommendation system that suggests gifts based on user input. Allows users to personalize gifts based on the recipient's age, gender, personality, and price range in US dollars. Used the Cohere LLM and hosted on Streamlit. 
-        </p>
-      </div>
-      <div class="project">
-        <h3>ResQlearn</h3>
-        <p>Tackle the issue of the lack of emergency knowledge taught in our traditional education system. Designed a gamification of traditional emergency skills' education, ResQLearn, for children to learn vital rescue techniques in fun and innovative ways. </p>
-      </div>
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card"></div>
+            <div class="project-card"></div>
+            <div class="project-card"></div>
+            <div class="project-card"></div>
+            <div class="project-card"></div>
+            <div class="project-card"></div>
+        </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" style="display: flex; align-items: center;">
-      <div style="flex: 1; padding-right: 20px;">
-        <h2>About Me</h2>
-        <p>With a profound fascination for technology and a relentless curiosity about the transformative power of AI, I am eager to deepen my understanding, embrace new challenges, and contribute to the field.</p>
-    </section> 
-
-    <!-- Audio Section --> 
-    <!-- 
-    <audio controls>
-      <source src="asset/sound.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    -->
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Let's innovate together</p>
+        <form>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
     <footer>
-      <p>© 2024 Portfolio by Sophie Ma</p>
+        <p>© 2024 Portfolio by Sophie Ma</p>
     </footer>
-  </body>
+</body>
 </html>
