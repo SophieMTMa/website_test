@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sophie MT</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-        <h1 class="name">Hi! I am<br><span class="name-outline">SOPHIE MT</span></h1>
-        <p class="subtitle">📍 500♾️ - Location</p>
-        <p>Recommended me below! ↓</p>
+        <div class="header-background"></div>
+        <div class="header-content">
+            <h1 class="name">Hi! I am<br><span class="name-outline">SOPHIE MT</span></h1>
+            <p class="subtitle">📍 Hong Kong</p>
+            <a href="#about" class="btn-learn-more">Learn about me below! ↓</a>
+        </div>
     </header>
 
     <section id="about">
@@ -23,9 +28,9 @@
             </div>
         </div>
         <div class="skills">
-            <div class="skill-box" title="Skill 1"></div>
-            <div class="skill-box" title="Skill 2"></div>
-            <div class="skill-box" title="Skill 3"></div>
+            <div class="skill-box" title="Skill 1">Python</div>
+            <div class="skill-box" title="Skill 2">JavaScript</div>
+            <div class="skill-box" title="Skill 3">UI/UX</div>
         </div>
     </section>
 
@@ -99,28 +104,65 @@
     <section id="projects">
         <h2>Projects</h2>
         <div class="projects-grid">
-            <div class="project-card"></div>
-            <div class="project-card"></div>
-            <div class="project-card"></div>
-            <div class="project-card"></div>
-            <div class="project-card"></div>
-            <div class="project-card"></div>
+            <div class="project-card">
+                <img src="placeholder.png" alt="Project Image">
+                <div class="project-content">
+                    <h3>Project 1</h3>
+                    <p>Using <a href="#">Python</a>, <a href="#">Machine Learning</a></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+                    <div class="links">
+                        <a href="#">GitHub</a> | <a href="#">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="placeholder.png" alt="Project Image">
+                <div class="project-content">
+                    <h3>Project 2</h3>
+                    <p>Using <a href="#">JavaScript</a>, <a href="#">React</a></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+                    <div class="links">
+                        <a href="#">GitHub</a> | <a href="#">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="placeholder.png" alt="Project Image">
+                <div class="project-content">
+                    <h3>Project 3</h3>
+                    <p>Using <a href="#">UI/UX</a>, <a href="#">Design</a></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+                    <div class="links">
+                        <a href="#">GitHub</a> | <a href="#">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Additional project cards here -->
         </div>
     </section>
 
     <section id="contact" class="contact">
         <h2>Contact</h2>
-        <p>Let's innovate together</p>
-        <form>
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Message" rows="4" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+        <div class="contact-links">
+            <a href="mailto:sophie.manting.ma@gmail.com" title="Email"><img src="email-icon.png" alt="Email"></a>
+            <a href="https://github.com/SophieMTMa" target="_blank" title="GitHub"><img src="github-icon.png" alt="GitHub"></a>
+            <a href="https://yourdatascienceportfolio.com" target="_blank" title="Data Science Portfolio"><img src="portfolio-icon.png" alt="Data Science Portfolio"></a>
+        </div>
     </section>
 
     <footer>
         <p>© 2024 Portfolio by Sophie Ma</p>
     </footer>
+
+    <script>
+        document.querySelectorAll('.project-card, .timeline-card').forEach((card) => {
+            card.addEventListener('mouseover', () => {
+                card.style.transform = 'scale(1.05)';
+            });
+            card.addEventListener('mouseout', () => {
+                card.style.transform = 'scale(1)';
+            });
+        });
+    </script>
 </body>
 </html>
