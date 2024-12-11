@@ -1,49 +1,447 @@
+/* Global Styles */
 body {
-  font-family: 'Times New Roman', Times, serif;
-  color: black;
-  background-color: white;
+  font-family: 'Source Code Pro', monospace;
   margin: 0;
   padding: 0;
-}
-
-nav {
-  background-color: black;
-  color: white;
-  padding: 10px;
-}
-
-nav ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-around;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 10px; /* Add padding for better hover effect */
-}
-
-nav a:hover {
-  background-color: rgba(156, 155, 160, 0.493); /* Change the background color to dark blue on hover */
-}
-
-section {
-  padding: 20px;
-  border-bottom: 1px solid black;
+  background: #121212;
+  color: #e0e0e0;
 }
 
 h1, h2, h3 {
-  color: black;
+  color: #00ffcc;
 }
 
+a {
+  color: #00ffcc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  background: #1e1e1e;
+  z-index: 1000;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+nav a {
+  margin: 0 15px;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #00aaff;
+}
+
+.btn-download-cv {
+  padding: 0.5rem 1.5rem;
+  background: linear-gradient(45deg, #007B9A, #00BFFF);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-download-cv:hover {
+  background: linear-gradient(45deg, #00BFFF, #007B9A);
+  transform: scale(1.05);
+}
+
+/* Hero Section */
+#hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background: url('cartoon-typing.gif') no-repeat center center fixed;
+  background-size: cover;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+#hero h1 {
+  font-size: 3rem;
+  color: #00ffcc;
+  margin-bottom: 1rem;
+}
+
+#hero .typing {
+  font-size: 24px;
+  color: #00ffcc;
+  font-weight: bold;
+}
+
+#hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85); /* Darker opacity */
+  z-index: 0;
+}
+
+#hero .hero-icons {
+  display: flex;
+  gap: 15px;
+  color: #00ffcc;
+  margin-bottom: 1rem;
+}
+
+#hero .hero-icons a {
+  color: #00ffcc;
+}
+
+#hero .hero-icons a:hover {
+  color: #00aaff;
+}
+
+
+/* About Me Section */
+#about {
+  text-align: left;
+}
+
+.about-content {
+  display: flex;
+  align-items: left;
+  gap: 20px; /* Space between text and image */
+}
+
+.text-content {
+  flex: 1;
+  line-height: 1.25;
+}
+
+.profile-pic {
+  width: 230px;
+  height: 270px;
+  border-radius: 50%;
+  border: 3px solid #00ffcc;
+  margin-top: 20px;
+}
+
+/* Responsive Design to ensure image stacks above text on smaller screens */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Stack image above text */
+    align-items: left; /* Center align the stack */
+  }
+
+  .profile-pic {
+    margin-bottom: 20px; /* Add margin below the image */
+  }
+}
+
+#about .icons {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+#about .icons i {
+  font-size: 30px;
+  margin: 0 10px;
+  color: #00ffcc;
+  transition: transform 0.3s ease;
+}
+
+#about .icons i:hover {
+  transform: scale(1.2);
+  color: #00aaff;
+}
+
+#about .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+#about .tags span {
+  background: #00aaff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Experience Section */
+#experience .timeline {
+  position: relative;
+  margin: 40px 0;
+  padding-left: 40px;
+}
+
+#experience .timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: 2px;
+  height: 100%;
+  background: #00ffcc;
+}
+
+.timeline-item {
+  margin-bottom: 20px;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: scale(1.03);
+}
+
+.timeline-item h3 {
+  margin-bottom: 5px;
+}
+
+#experience .tags {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#experience .tags span {
+  background: #00aaff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#experience .timeline-item .collapsible-content {
+  display: none;
+  padding-left: 40px;
+  margin-top: 10px;
+  background: #1a1a1a;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.timeline-item.active {
+  transform: scale(1.05);
+  background: #1a1a1a;
+}
+
+.timeline-item.active .collapsible-content {
+  display: block;
+}
+
+/* Education Section - Same as Experience */
+#education .timeline {
+  position: relative;
+  margin: 40px 0;
+  padding-left: 40px;
+}
+
+#education .timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: 2px;
+  height: 100%;
+  background: #00ffcc;
+}
+
+#education .timeline-item {
+  margin-bottom: 20px;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+#education .timeline-item:hover {
+  transform: scale(1.03);
+}
+
+#education .timeline-item h3 {
+  margin-bottom: 5px;
+}
+
+#education .tags {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#education .tags span {
+  background: #00aaff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#education .timeline-item .collapsible-content {
+  display: none;
+  padding-left: 40px;
+  margin-top: 10px;
+  background: #1a1a1a;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#education .timeline-item.active {
+  transform: scale(1.05);
+  background: #1a1a1a;
+}
+
+#education .timeline-item.active .collapsible-content {
+  display: block;
+}
+
+/* Projects Section */
+#projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align items to the start (left) */
+  gap: 20px;
+}
+
+#projects .projects-grid {
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Align items to the left */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px; 
+}
+
+#projects .card {
+  background: #1a1a1a;
+  border: 2px solid #00ffcc;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 2px;
+  width: calc(45% - 0px); /* Four cards in a row */
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+#projects .card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#projects .card:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+#projects .card h3 {
+  margin-bottom: 10px;
+}
+
+#projects .tags {
+  display: flex;
+  gap: 10px;
+  justify-content: left;
+  margin-bottom: 10px;
+}
+
+#projects .tags span {
+  background: #00aaff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Contact Section */
+#contact {
+  text-align: left;
+}
+
+#contact .social-icons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+#contact .social-icons i {
+  font-size: 30px;
+  color: #00ffcc;
+  transition: transform 0.3s ease;
+}
+
+#contact .social-icons i:hover {
+  transform: scale(1.2);
+  color: #00aaff;
+}
+
+/* Footer */
 footer {
   text-align: center;
-  padding: 10px;
-  background-color: black;
-  color: white;
+  padding: 20px;
+  background: #1e1e1e;
 }
 
-.large-text {
-  font-size: 2em; /* This makes the text twice as big */
+footer a {
+  color: #00ffcc;
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .card {
+    width: calc(25% - 40px); /* Four cards in a row */
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: calc(50% - 40px); /* Two cards in a row */
+  }
+
+  #hero {
+    padding: 0 10px;
+  }
+
+  #hero .typing {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: calc(100% - 20px); /* One card in a row */
+  }
+
+  nav a {
+    font-size: 12px;
+    margin: 0 5px;
+  }
+
+  .btn-download-cv {
+    padding: 0.5rem 1rem;
+  }
+
+  #hero h1 {
+    font-size: 2rem;
+  }
+}
+
