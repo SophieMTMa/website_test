@@ -27,6 +27,7 @@ section {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  z-index: 1;
 }
 
 /* Header */
@@ -54,17 +55,39 @@ nav a:hover {
   color: #00aaff;
 }
 
+.btn-download-cv {
+  padding: 0.5rem 1.5rem;
+  background: linear-gradient(45deg, #007B9A, #00BFFF);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-download-cv:hover {
+  background: linear-gradient(45deg, #00BFFF, #007B9A);
+  transform: scale(1.05);
+}
+
 /* Hero Section */
 #hero {
   height: 100vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
   background: url('cartoon-typing.gif') no-repeat center center fixed;
   background-size: cover;
-  text-align: center;
+  text-align: left;
   position: relative;
   overflow: hidden;
+  padding: 0 20px;
+}
+
+#hero h1 {
+  font-size: 3rem;
+  color: #00ffcc;
+  margin-bottom: 1rem;
 }
 
 #hero .typing {
@@ -79,24 +102,65 @@ nav a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.85); /* Darker opacity */
+  z-index: 0;
 }
+
+#hero .hero-icons {
+  display: flex;
+  gap: 15px;
+  color: #00ffcc;
+  margin-bottom: 1rem;
+}
+
+#hero .hero-icons a {
+  color: #00ffcc;
+}
+
+#hero .hero-icons a:hover {
+  color: #00aaff;
+}
+
 
 /* About Me Section */
 #about {
-  text-align: center;
+  text-align: left;
 }
 
-#about img {
-  width: 150px;
-  height: 150px;
+.about-content {
+  display: flex;
+  align-items: left;
+  gap: 20px; /* Space between text and image */
+}
+
+.text-content {
+  flex: 1;
+  line-height: 1.25;
+}
+
+.profile-pic {
+  width: 230px;
+  height: 270px;
   border-radius: 50%;
   border: 3px solid #00ffcc;
+  margin-top: 20px;
+}
+
+/* Responsive Design to ensure image stacks above text on smaller screens */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Stack image above text */
+    align-items: left; /* Center align the stack */
+  }
+
+  .profile-pic {
+    margin-bottom: 20px; /* Add margin below the image */
+  }
 }
 
 #about .icons {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: 20px;
 }
 
@@ -110,6 +174,21 @@ nav a:hover {
 #about .icons i:hover {
   transform: scale(1.2);
   color: #00aaff;
+}
+
+#about .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+#about .tags span {
+  background: #00aaff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 /* Experience Section */
@@ -129,17 +208,25 @@ nav a:hover {
   background: #00ffcc;
 }
 
-#experience .timeline-item {
+.timeline-item {
   margin-bottom: 20px;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
-#experience .timeline-item h3 {
+.timeline-item:hover {
+  transform: scale(1.03);
+}
+
+.timeline-item h3 {
   margin-bottom: 5px;
 }
 
 #experience .tags {
   display: flex;
   gap: 10px;
+  margin-top: 10px;
 }
 
 #experience .tags span {
@@ -149,7 +236,25 @@ nav a:hover {
   border-radius: 5px;
 }
 
-/* Education Section */
+#experience .timeline-item .collapsible-content {
+  display: none;
+  padding-left: 40px;
+  margin-top: 10px;
+  background: #1a1a1a;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.timeline-item.active {
+  transform: scale(1.05);
+  background: #1a1a1a;
+}
+
+.timeline-item.active .collapsible-content {
+  display: block;
+}
+
+/* Education Section - Same as Experience */
 #education .timeline {
   position: relative;
   margin: 40px 0;
@@ -168,11 +273,30 @@ nav a:hover {
 
 #education .timeline-item {
   margin-bottom: 20px;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+#education .timeline-item:hover {
+  transform: scale(1.03);
 }
 
 #education .timeline-item h3 {
   margin-bottom: 5px;
-  cursor: pointer;
+}
+
+#education .tags {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#education .tags span {
+  background: #00aaff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 #education .timeline-item .collapsible-content {
@@ -184,40 +308,72 @@ nav a:hover {
   border-radius: 5px;
 }
 
-/* Handle toggling of collapsible content */
-.timeline-item.active .collapsible-content {
+#education .timeline-item.active {
+  transform: scale(1.05);
+  background: #1a1a1a;
+}
+
+#education .timeline-item.active .collapsible-content {
   display: block;
 }
 
 /* Projects Section */
 #projects {
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align items to the start (left) */
+  gap: 20px;
+}
+
+#projects .projects-grid {
+  display: flex; 
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start; /* Align items to the left */
+  gap: 20px; 
 }
 
 #projects .card {
   background: #1a1a1a;
   border: 2px solid #00ffcc;
   border-radius: 10px;
-  padding: 20px;
-  margin: 10px;
-  width: calc(33% - 40px);
-  text-align: center;
-  transition: transform 0.3s ease;
+  padding: 15px;
+  margin: 2px;
+  width: calc(45% - 0px); /* Four cards in a row */
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+#projects .card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 #projects .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) scale(1.05);
 }
 
 #projects .card h3 {
   margin-bottom: 10px;
 }
 
+#projects .tags {
+  display: flex;
+  gap: 10px;
+  justify-content: left;
+  margin-bottom: 10px;
+}
+
+#projects .tags span {
+  background: #00aaff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
 /* Contact Section */
 #contact {
-  text-align: center;
+  text-align: left;
 }
 
 #contact .social-icons {
@@ -249,15 +405,29 @@ footer a {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .card {
+    width: calc(25% - 40px); /* Four cards in a row */
+  }
+}
+
 @media (max-width: 768px) {
   .card {
-    width: calc(50% - 40px);
+    width: calc(50% - 40px); /* Two cards in a row */
+  }
+
+  #hero {
+    padding: 0 10px;
+  }
+
+  #hero .typing {
+    font-size: 20px;
   }
 }
 
 @media (max-width: 480px) {
   .card {
-    width: calc(100% - 20px);
+    width: calc(100% - 20px); /* One card in a row */
   }
 
   nav a {
@@ -268,4 +438,9 @@ footer a {
   .btn-download-cv {
     padding: 0.5rem 1rem;
   }
+
+  #hero h1 {
+    font-size: 2rem;
+  }
 }
+

@@ -25,38 +25,109 @@
   <section id="hero">
     <div class="overlay"></div>
     <div class="container">
-      <h1>Welcome to My Portfolio</h1>
-      <p class="typing">I am a developer passionate about coding and innovation.</p>
+      <h1>Hi! I'm Sophie!</h1>
+      <div class="hero-icons">
+        <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>  
+        <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:yourmail@example.com" target="_blank"><i class="fas fa-envelope"></i></a>
+      </div>
+      <p class="typing">I am a developer with a profound fascination for technology and a relentless curiosity about innovation.</p>
     </div>
   </section>
 
-  <!-- About Me Section -->
-  <section id="about">
-    <div class="container">
-      <img src="profile.jpg" alt="Profile Picture">
-      <h2>About Me</h2>
-      <p>Hello! I’m a tech enthusiast focused on building innovative solutions.</p>
-      <div class="icons">
-        <i class="fab fa-python" title="Python"></i>
-        <i class="fab fa-js" title="JavaScript"></i>
-        <i class="fab fa-java" title="Java"></i>
-      </div>
-    </div>
-  </section>
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="container about-content">
+          <div class="text-content">
+            <h2>About Me</h2>
+            <p>With a profound fascination for technology and a relentless curiosity about the transformative power of AI, I am eager to deepen my understanding, embrace new challenges, and contribute to the field. Through my courses in this field as well as my teacher's assistant experience, I have deepened my understanding and determination to cultivate a path where I can continuously learn and grow.</p>
+            <div class="icons">
+              <i class="fab fa-python" title="Python"></i>
+              <i class="fab fa-js" title="JavaScript"></i>
+              <i class="fab fa-java" title="Java"></i>
+            </div>
+            <div class="tags">
+                <span>Swift</span>
+                <span>Xcode</span>
+                <span>Python</span>
+                <span>Cursor</span>
+                <span>AIML</span>
+                <span>Data Visualisation</span>
+                <span>Data Analysis</span>
+                <span>Deep Reinforcement Learning</span>
+                <span>Website Design</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Design Thinking</span>
+                <span>MongoDB</span>
+                <span>GradioUI</span>
+                <span>Data Sourcing</span>
+                <span>Web Scraping</span>
+                <span>Sentiment Analysis</span>
+                <span>Communication</span>
+                <span>Public Speaking</span>
+            </div>
+          </div>
+          <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
+        </div>
+      </section>
 
   <!-- Experience Section -->
   <section id="experience">
     <div class="container">
       <h2>Experience</h2>
       <div class="timeline">
-        <div class="timeline-item">
-          <h3>Software Engineer</h3>
-          <span>2020 - Present</span>
-          <div class="tags">
-            <span>React</span>
-            <span>Node.js</span>
+        <div class="timeline-item" onclick="toggleItem(this)">
+            <h3>Internship at AI Market Research Company</h3>
+            <span>2023 - 2024</span>
+            <div class="tags">
+              <span>Python</span>
+              <span>Cursor</span>
+              <span>MongoDB</span>
+              <span>GradioUI</span>
+              <span>Data Sourcing</span>
+              <span>Web Scraping</span>
+              <span>Sentiment Analysis</span>
+              <span>Communication</span>
+            </div>
+            <p>During my internship at an AI market research company, I helped create a Cantonese LLM for HKGov. I sourced data, performed web scraping, and developed a data-cleaning pipeline that boosted our team’s efficiency. This deepened my understanding of AI's real-world applications and showed how technology can bridge communication gaps meaningfully.
+            </p>
           </div>
-          <p>Developed scalable web applications.</p>
+        <div class="timeline-item" onclick="toggleItem(this)">
+          <h3>Teacher Assistant at School Mobile Development Course</h3>
+          <span>2023 - 2024</span>
+          <div class="tags">
+            <span>Swift</span>
+            <span>Xcode</span>
+            <span>Content Planning</span>
+            <span>Generating Materials</span>
+            <span>Communication</span>
+          </div>
+          <p>I take part in planning lessons and creating extension materials for students, working with them, and understanding their difficulties. I think through issues creatively and explain them in a way that is clear and concise. In helping them on their learning journey, I am not only able to enlighten them on my passion and the advances in technology but also enhance my interpersonal skills as a result. Putting myself in a teacher's perspective helped me appreciate their dedication put into crafting simple, engaging, educational content, deepening my understanding of effective teaching and learning.
+          </p>
+        </div>
+        <div class="timeline-item" onclick="toggleItem(this)">
+            <h3>Most Popular Vote Award at Hackathon</h3>
+            <span>2023 - 2024</span>
+            <div class="tags">
+              <span>Swift</span>
+              <span>Xcode</span>
+              <span>Public Speaking</span>
+            </div>
+            <p>I was the leader of our team, Codeherlics, and we created an app called ResQLearn to tackle the issue of the lack of emergency knowledge taught in our traditional education system. We designed a conventional emergency gamification skills education ResQ Learn for children to learn vital rescue techniques in fun and innovative ways. The overall app consists of the following features: Emergency guides, Preparedness checklists, and Interactive simulators.
+            </p>
+        </div>
+        <div class="timeline-item" onclick="toggleItem(this)">
+            <h3>Best Mission Award Winner at School Hackathon</h3>
+            <span>2023 - 2024</span>
+            <div class="tags">
+              <span>Swift</span>
+              <span>Xcode</span>
+              <span>Public Speaking</span>
+            </div>
+            <p>Developed an AI model and app that efficiently sorts recyclable items, preventing them from being mistakenly discarded in regular trash bins. Users can effortlessly scan items to instantly determine their recyclability and the appropriate category: paper, plastic, or metal.
+        </p>
         </div>
       </div>
     </div>
@@ -68,17 +139,22 @@
       <h2>Education</h2>
       <div class="timeline">
         <div class="timeline-item" onclick="toggleItem(this)">
-          <h3>Bachelor of Science in Computer Science</h3>
-          <span>University of XYZ, 2016 - 2020</span>
-          <div class="collapsible-content">
-            <p>Graduated with Honors. Relevant coursework: Data Structures, Algorithms, Machine Learning.</p>
+          <h3>International School in Hong Kong</h3>
+          <span>2021 - 2025</span>
+          <div class="tags">
+            <span>Swift</span>
+            <span>Xcode</span>
+            <span>Python</span>
+            <span>Cursor</span>
+            <span>AIML</span>
+            <span>Website Design</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Design Thinking</span>
           </div>
+            <p>In progress. Relevant coursework: Artificial Intelligence and Machine Learning, Advanced Computer Science Studio, Advanced Placement Computer Science Principles, Mobile App Development, Coding in Action.</p>
         </div>
         <div class="timeline-item" onclick="toggleItem(this)">
-          <h3>Certified Java Developer</h3>
-          <span>Oracle, 2021</span>
-          <div class="collapsible-content">
-            <p>Completed professional certification for Java SE development.</p>
           </div>
         </div>
       </div>
@@ -89,17 +165,73 @@
   <section id="projects">
     <div class="container">
       <h2>Projects</h2>
-      <div class="card">
-        <h3>Project One</h3>
-        <p>A brief description of the project.</p>
-        <a href="https://github.com/yourusername/project-one">GitHub</a>
-        <a href="https://demo.com/project-one">Demo</a>
-      </div>
-      <div class="card">
-        <h3>Project Two</h3>
-        <p>A brief description of the project.</p>
-        <a href="https://github.com/yourusername/project-two">GitHub</a>
-        <a href="https://demo.com/project-two">Demo</a>
+      <div class="projects-grid">
+        <div class="card">
+          <img src="GiftGenie.png" alt="GiftGenie">
+          <h3>Gift Genie - LLM Chatbot</h3>
+          <p>Gift Genie is a recommendation system that suggests gifts based on user input. Allows users to personalize gifts based on the recipient's age, gender, personality, and price range in US dollars. Used the Cohere LLM and hosted on Streamlit.</p>
+          <div class="tags">
+            <span>Python</span>
+            <span>Large Language Model (LLM)</span>
+          </div>
+          <a href="https://github.com/SophieMTMa/LLM-PDF-Chatbot.git">GitHub</a>
+        </div>
+        <div class="card">
+            <img src="ResQLearn.png" alt="ResQLearn">
+            <h3>ResQLearn</h3>
+            <p>Tackle the issue of the lack of emergency knowledge taught in our traditional education system. Designed a gamification of traditional emergency skills' education, ResQLearn, for children to learn vital rescue techniques in fun and innovative ways.</p>
+            <div class="tags">
+              <span>Swift</span>
+              <span>Xcode</span>
+            </div>
+            <a href="https://github.com/lily4201/ResQLearn.git">GitHub</a>
+            <a href="https://github.com/lily4201/ResQLearn/assets/94894977/5f16e60e-6353-406e-b93e-bd6cee7e21b2">Demo</a>
+            <a href="https://github.com/lily4201/ResQLearn/files/15479143/Codeherlics.-.ResQLearn.pdf">Slides</a>
+          </div>
+        <div class="card">
+          <img src="transferlearning.png" alt="Transfer Learning of Chinese Characters">
+          <h3>Transfer Learning of Chinese Characters</h3>
+          <p>Exploring Traditional Chinese Optical Recognition. Focuses on classifying three commonly used Chinese characters: "的" (de), "不" (bu), and "和" (he). Leverages the power of transfer learning. Builds upon the knowledge acquired by a pre-trained model - ImageNet and ResNet.</p>
+          <div class="tags">
+            <span>Python</span>
+            <span>Transfer Learning</span>
+            <span>Dataset Creation</span>
+          </div>
+          <a href="https://colab.research.google.com/drive/1uap3rqc1ssrM0tC8rLJizqEix2plGVav?usp=sharing#scrollTo=Fc_daTVdkVs1">Google Colab</a>
+          <a href="https://www.google.com/url?q=https%3A%2F%2Fwww.kaggle.com%2Fdatasets%2Fmamantingsophie%2Fchinese-ocr-training-3-words%2Fdata%3Fselect%3DChinese_OCR_Training_3">Dataset</a>
+        </div>
+        <div class="card">
+          <img src="fxdeepLearning.png" alt="Foreign Exchange Rate Deep Learning Project">
+          <h3>Foreign Exchange Rate Deep Learning Project</h3>
+          <p>Fascinated by the domain of forex rate forecasting, this project sets the stage for creating a model that captures the complex dynamics of the market. Neural networks and the A2C deep learning algorithm train an adaptive model that learns from experience and makes optimal decisions.</p>
+          <div class="tags">
+            <span>Python</span>
+            <span>Deep Reinforcement Learning</span>
+          </div>
+          <a href="https://colab.research.google.com/drive/1nE_2pwgGOYaNHdAeK0Rpu5jeSMhLL8El?usp=sharing">Google Colab</a>
+        </div>
+        <div class="card">
+            <img src="predAnalysisAIMLJS.png" alt="Data Analysis and Visualisation of the Relationship among Wine Rating, Price, and Origin Country">
+            <h3>Data Analysis and Visualisation of the Relationship among Wine Rating, Price, and Origin Country</h3>
+            <p>This research analyzes a dataset of red wines, focusing on winery, average rating, price in EUR, and year of production. By exploring these variables, we aim to gain insights into the highest-rated red wines from year of production, ranging prices and wineries.</p>
+            <div class="tags">
+              <span>Python</span>
+              <span>Data Visualisation</span>
+              <span>Data Analysis</span>
+            </div>
+            <a href="https://www.datacamp.com/datalab/w/aeac882d-8e50-4c69-99db-4b8ed628ebf7/edit">Kaggle Jupyter Notebook</a>
+          </div>
+        <div class="card">
+            <img src="wine.png" alt="Predictive Analysis of Job Salaries in the AI, ML, and Data Science Space">
+            <h3>Predictive Analysis of Job Salaries in the AI, ML, and Data Science Space</h3>
+            <p>This project aims to analyze anonymized salary information from professionals worldwide and develop a machine-learning model to predict salaries accurately to address the challenge of determining fair compensation based on one's experience level.</p>
+            <div class="tags">
+              <span>Python</span>
+              <span>Data Cleaning</span>
+              <span>Data Analysis</span>
+            </div>
+            <a href="https://www.datacamp.com/datalab/w/eb5d72a5-ddfc-4571-9ff3-be73d585e71e/edit">Data Camp Jupyter Notebook</a>
+          </div>
       </div>
     </div>
   </section>
@@ -117,7 +249,7 @@
   </section>
 
   <footer>
-    <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    <p>&copy; 2024 Sophie 🥰🤪. All Rights Reserved.</p>
   </footer>
 
   <script>
