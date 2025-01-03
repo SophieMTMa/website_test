@@ -254,6 +254,69 @@ nav a:hover {
   display: block;
 }
 
+/* Awards Section */
+#awards .timeline {
+  position: relative;
+  margin: 40px 0;
+  padding-left: 40px;
+}
+
+#awards .timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: 2px;
+  height: 100%;
+  background: #00ffcc;
+}
+
+.timeline-item {
+  margin-bottom: 20px;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: scale(1.03);
+}
+
+.timeline-item h3 {
+  margin-bottom: 5px;
+}
+
+#awards .tags {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#awards .tags span {
+  background: #00aaff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#awards .timeline-item .collapsible-content {
+  display: none;
+  padding-left: 40px;
+  margin-top: 10px;
+  background: #1a1a1a;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.timeline-item.active {
+  transform: scale(1.05);
+  background: #1a1a1a;
+}
+
+.timeline-item.active .collapsible-content {
+  display: block;
+}
+
 /* Education Section - Same as Experience */
 #education .timeline {
   position: relative;
@@ -347,6 +410,7 @@ nav a:hover {
 #projects .card img {
   width: 100%;
   border-radius: 10px;
+  display: block;
   margin-bottom: 10px;
 }
 
@@ -370,6 +434,69 @@ nav a:hover {
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
+}
+
+/* Extracurricular Section */
+#extracurricular .timeline {
+  position: relative;
+  margin: 40px 0;
+  padding-left: 40px;
+}
+
+#extracurricular .timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: 2px;
+  height: 100%;
+  background: #00ffcc;
+}
+
+.timeline-item {
+  margin-bottom: 20px;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: scale(1.03);
+}
+
+.timeline-item h3 {
+  margin-bottom: 5px;
+}
+
+#extracurricular .tags {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#extracurricular .tags span {
+  background: #00aaff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+#extracurricular .timeline-item .collapsible-content {
+  display: none;
+  padding-left: 40px;
+  margin-top: 10px;
+  background: #1a1a1a;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.timeline-item.active {
+  transform: scale(1.05);
+  background: #1a1a1a;
+}
+
+.timeline-item.active .collapsible-content {
+  display: block;
 }
 
 /* Contact Section */
